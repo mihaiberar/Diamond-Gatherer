@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(41, 79, 105);
+}
+
+canvas {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: whitesmoke;
+}
+
+#myButton {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(8, 129, 49);
+  font-size: 1.5rem;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+#myButton:active {
+  transform: translateY(2px);
+  background-color: rgb(243, 59, 13);
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+#myButton:hover {
+  cursor: pointer;
+}
+
+/* Media Query */
+@media screen and (max-width: 600px) {
+  .canvas-content {
+    width: 95%;
+  }
+}

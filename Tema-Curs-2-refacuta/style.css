@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(40, 110, 46);
+}
+
+canvas {
+  border: 2px solid rgb(0, 0, 0);
+  background-image: url("assets/desert.png");
+  background-size: 100%;
+}
+
+#myButton {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(37, 117, 163, 0.925);
+  outline: none;
+  border-radius: 5px;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+#myButton:active {
+  transform: translateY(2px);
+  background-color: rgb(221, 54, 24);
+  color: rgb(230, 236, 245);
+  font-weight: bolder;
+}
+
+#myButton:hover {
+  cursor: pointer;
+}
+
+label {
+  color: whitesmoke;
+}
+
+.canvas-task {
+  float: right;
+  margin-right: 42%;
+}
