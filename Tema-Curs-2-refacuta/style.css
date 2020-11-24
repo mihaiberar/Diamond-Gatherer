@@ -1,5 +1,7 @@
 body {
   background-color: rgb(40, 110, 46);
+  display: flex;
+  justify-content: flex-start;
 }
 
 canvas {
@@ -33,6 +35,5 @@ label {
 }
 
 .canvas-task {
-  float: right;
-  margin-right: 42%;
+  margin-left: 10px;
 }
