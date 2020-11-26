@@ -84,14 +84,16 @@ let marioWidthLimit = canvas.width - marioWidth;
 let georgeHeightLimit = canvas.height - georgeHeight;
 let marioHeightLimit = canvas.height - marioHeight;
 
+import { Validator } from "./validator.js";
+
 document.addEventListener("keydown", function (event) {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
   switch (event.key) {
     case "ArrowUp":
-      if (georgeY > 0) {
-        georgeY -= 10;
-      }
+     
+      georgeY = Validator.validateUp(georgeY);
+      
       break;
     case "ArrowDown":
       if (georgeY < georgeHeightLimit) {
