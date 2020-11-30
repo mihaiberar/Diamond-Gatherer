@@ -31,6 +31,8 @@ myPerson.forEach(function (val, poz) {
 });
 
 // TASKS 3 & 4
+import { Validator } from "./validator.js";
+
 const canvas = document.querySelector("#canvasId");
 /** @type {CanvasRenderingContext2D} */
 const context = canvas.getContext("2d");
@@ -79,57 +81,34 @@ mario.onload = () => {
   );
 };
 
-let georgeWidthLimit = canvas.width - georgeWidth;
-let marioWidthLimit = canvas.width - marioWidth;
-let georgeHeightLimit = canvas.height - georgeHeight;
-let marioHeightLimit = canvas.height - marioHeight;
-
-import { Validator } from "./validator.js";
-
 document.addEventListener("keydown", function (event) {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
   switch (event.key) {
     case "ArrowUp":
-     
       georgeY = Validator.validateUp(georgeY);
-      
       break;
     case "ArrowDown":
-      if (georgeY < georgeHeightLimit) {
-        georgeY += 10;
-      }
+      georgeY = Validator.validateDown(georgeY);
       break;
     case "ArrowLeft":
-      if (georgeX > 0) {
-        georgeX -= 10;
-      }
+      georgeX = Validator.validateLeft(georgeX);
       break;
     case "ArrowRight":
-      if (georgeX < georgeWidthLimit) {
-        georgeX += 10;
-      }
+      georgeX = Validator.validateRight(georgeX);
       break;
 
     case "w":
-      if (marioY > 0) {
-        marioY -= 10;
-      }
+      marioY = Validator.validateUp(marioY);
       break;
     case "s":
-      if (marioY < marioHeightLimit) {
-        marioY += 10;
-      }
+      marioY = Validator.validateDown(marioY);
       break;
     case "a":
-      if (marioX > 0) {
-        marioX -= 10;
-      }
+      marioX = Validator.validateLeft(marioX);
       break;
     case "d":
-      if (marioX < marioWidthLimit) {
-        marioX += 10;
-      }
+      marioX = Validator.validateRight(marioX);
       break;
 
     default:
